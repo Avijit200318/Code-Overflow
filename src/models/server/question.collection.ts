@@ -30,23 +30,23 @@ const createQuestionCollection = async () => {
 
     //  creation of indexes
 
-    await Promise.all([
-        databases.createIndex(
-            db, questionCollection, "title", IndexType.Fulltext, ["title"], ["asc"]
-        ),
-        databases.createIndex(
-            db, questionCollection, "content", IndexType.Fulltext, ["content"], ["asc"]
-        ),
-        databases.createIndex(
-            db, questionCollection, "authorId", IndexType.Fulltext, ["authorId"], ["asc"]
-        ),
-        databases.createIndex(
-            db, questionCollection, "tags", IndexType.Fulltext, ["tags"], ["asc"]
-        ),
-        databases.createIndex(
-            db, questionCollection, "attachmentId", IndexType.Fulltext, ["attachmentId"], ["asc"]
-        )
-    ])
+    // await Promise.all([
+    //     databases.createIndex(
+    //         db, questionCollection, "title", IndexType.Fulltext, ["title"], ["asc"]
+    //     ),
+    //     databases.createIndex(
+    //         db, questionCollection, "content", IndexType.Fulltext, ["content"], ["asc"]
+    //     ),
+    //     databases.createIndex(
+    //         db, questionCollection, "authorId", IndexType.Fulltext, ["authorId"], ["asc"]
+    //     ),
+    //     databases.createIndex(
+    //         db, questionCollection, "tags", IndexType.Fulltext, ["tags"], ["asc"]
+    //     ),
+    //     databases.createIndex(
+    //         db, questionCollection, "attachmentId", IndexType.Fulltext, ["attachmentId"], ["asc"]
+    //     )
+    // ])
 }
 
 export default createQuestionCollection;
